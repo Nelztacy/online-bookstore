@@ -1,11 +1,9 @@
-FROM openjdk:8u151-jdk-alpine3.7
+FROM openjdk:11-jre-slim
+
+WORKDIR /app
+
+COPY target/onlinebookstore-*.jar app.jar
 
 EXPOSE 8070
 
-ENV APP_HOME /usr/src/app
-
-COPY target/onlinebookstore.war $APP_HOME/app.jar
-
-WORKDIR $APP_HOME
-
-ENTRYPOINT exec java -jar app.jar
+CMD ["java", "-jar", "app.jar"]
