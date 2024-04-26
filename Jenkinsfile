@@ -24,7 +24,7 @@ pipeline {
         stage('Deployments') {
             steps {
                 script {
-                    sh "scp **/*.war jenkins@${params.tomcat_stag}:/usr/share/tomcat/webapps"
+                    sh "scp **/*.war technel@${params.tomcat_stag}:/usr/share/tomcat/webapps"
                 }
             }
         }
