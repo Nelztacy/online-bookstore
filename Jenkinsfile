@@ -5,7 +5,7 @@ pipeline {
     }
 
     parameters {
-         string(name: 'tomcat_stag', defaultValue: '10.0.0.116', description: 'Tomcat Staging Server')
+         string(name: 'tomcat_stag', defaultValue: '10.0.0.113', description: 'Tomcat Staging Server')
     }
 
     stages {
